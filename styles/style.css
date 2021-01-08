@@ -1,0 +1,126 @@
+*
+{
+    margin: 10px;
+    padding:0px;
+}
+
+body 
+{
+    background-color: rgb(0, 0, 0);
+}
+
+/* =====================
+	電光掲示板
+======================= */
+.ledText 
+{
+    overflow: hidden;
+    position: relative;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* CSS3グラデーションでドット感を出す */
+/* .ledText::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(#0a0600 1px, transparent 0px), linear-gradient(0, #0a0600 1px, transparent 1px);
+	background-image: -webkit-linear-gradient(#0a0600 1px, transparent 0px), -webkit-linear-gradient(0, #0a0600 1px, transparent 1px);
+	background-size: 2px 2px;
+    z-index: 10;
+} */
+
+/* CSS3アニメーションでスクロール */
+.ledText span 
+{
+	display: inline-block;
+	white-space: nowrap;
+    padding-left: 100%;
+    animation: marquee 10s linear infinite;
+    color: blanchedalmond;
+}
+
+@keyframes marquee 
+{
+  from   { transform: translate(0%);}
+  to { transform: translate(-100%);}
+}
+
+/* =====================
+	watch
+======================= */
+.ContentWrapper
+{
+    /* font-family: 'Redressed', cursive; */
+    font-size:3em;
+    color: darkgray;
+}
+
+.ContentWrapper > .Clock
+{
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.ContentWrapper > .Clock > div {
+    display: inline-block;
+    margin:0;
+    padding:0;
+}
+
+.ContentWrapper > .Clock > .Colon {
+    transition: all 0.5s;
+}
+
+.ContentWrapper > .Clock > .Colon.blink {
+    opacity: 0;
+}
+
+#RealtimeClockDay
+{
+    letter-spacing: 0.1em;
+    font-family: 'Redressed', cursive;
+    font-size: xx-large;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+/* =====================
+	table
+======================= */
+
+.tablewrapper
+{
+    text-align: center;
+}
+
+table
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table , td, th {
+    color: white;
+	border: 1px solid #595959;
+	border-collapse: separate;
+}
+td, th {
+	padding: 3px;
+	width: 30px;
+	height: 25px;
+}
+th {
+	background: #f0e6cc;
+}
+.even {
+	background: #fbf8f0;
+}
+.odd {
+	background: #fefcf9;
+}
